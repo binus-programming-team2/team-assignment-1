@@ -4,11 +4,7 @@ public class Order {
     String name;
     int person;
 
-    private int friedRice;
-    private int chicken;
-    private int steak;
-    private int kwetiaw;
-    private int goat;
+    private int friedRice, chicken, steak, kwetiaw, goat;
 
     public Order(String name, int person) {
         this.name = name;
