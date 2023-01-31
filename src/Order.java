@@ -13,16 +13,30 @@ public class Order {
 
     public void writeOrder(Scanner input) {
         System.out.println("\nPesanan Anda [Batas 0-10 point]");
-        System.out.printf("%-30s = ", "1. Nasi Goreng Spesial");
-        this.friedRice = input.nextInt();
-        System.out.printf("%-30s = ", "2. Ayam Bakar Spesial");
-        this.chicken = input.nextInt();
-        System.out.printf("%-30s = ", "3. Steak Sirloin Spesial");
-        this.steak = input.nextInt();
-        System.out.printf("%-30s = ", "4. Kwetiaw Siram Spesial");
-        this.kwetiaw = input.nextInt();
-        System.out.printf("%-30s = ", "5. Kambing Guling Spesial");
-        this.goat = input.nextInt();
+        do {
+            System.out.printf("%-30s = ", "1. Nasi Goreng Spesial");
+            this.friedRice = input.nextInt();
+        } while (this.friedRice < 0 || this.friedRice > 10);
+
+        do {
+            System.out.printf("%-30s = ", "2. Ayam Bakar Spesial");
+            this.chicken = input.nextInt();
+        } while (this.chicken < 1 || this.chicken > 10);
+
+        do {
+            System.out.printf("%-30s = ", "3. Steak Sirloin Spesial");
+            this.steak = input.nextInt();
+        } while (this.steak < 1 || this.steak > 10);
+
+        do {
+            System.out.printf("%-30s = ", "4. Kwetiaw Siram Spesial");
+            this.kwetiaw = input.nextInt();
+        } while (this.kwetiaw < 1 || this.kwetiaw > 10);
+
+        do {
+            System.out.printf("%-30s = ", "5. Kambing Guling Spesial");
+            this.goat = input.nextInt();
+        } while (this.goat < 1 || this.goat > 10);
 
         System.out.println("\nSelamat menikmati makanan anda...");
 
